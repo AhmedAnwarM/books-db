@@ -69,18 +69,22 @@ public class BooksInterface {
         Book result = null;
         switch (selection) {
             case 1:
-                String name = scanner.nextLine();
+                System.out.println("Enter Partial Book Name: ");
+                String name = scanner.next();
                 print(ctrl.searchByName(name));
                 break;
             case 2:
-                String author = scanner.nextLine();
+                System.out.println("Enter Partial Author Name: ");
+                String author = scanner.next();
                 print(ctrl.searchByAuthor(author));
                 break;
             case 3:
-                String descrption = scanner.nextLine();
+                System.out.println("Enter Partial Book Description: ");
+                String descrption = scanner.next();
                 print(ctrl.searchByDescription(descrption));
                 break;
             case 4:
+                System.out.println("Enter Book ID: ");
                 Long id = scanner.nextLong();
                 print(ctrl.getById(id));
                 break;

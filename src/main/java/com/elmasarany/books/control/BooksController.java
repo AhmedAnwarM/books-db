@@ -36,6 +36,7 @@ public class BooksController {
 
     public void updateBook(Long id, Book updatedBook) throws InvalidBookException {
         validateUpdatedBook(updatedBook);
+        books.removeIf(book -> book.getId().equals(id));
         books.add(updatedBook);
     }
 
