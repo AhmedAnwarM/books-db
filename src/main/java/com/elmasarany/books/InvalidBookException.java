@@ -1,7 +1,7 @@
 package com.elmasarany.books;
 
 /**
- * @author Ahmed Anwar
+ * @author Ahmed El Masarany
  */
 public class InvalidBookException extends Exception {
     public InvalidBookException() {
