@@ -1,4 +1,4 @@
-package com.elmasarany.books.utility;
+package com.elmasarany.utility;
 
 import com.elmasarany.books.entity.Book;
 
