@@ -24,12 +24,12 @@ public class BooksInterface {
         ctrl = new BooksController();
         int selection = 0;
         while (selection != 5) {
-            System.out.println("==== Book Manager ====" +
-                               ("1) View all books") +
-                               "(2) Add a book" +
-                               "(3) Edit a book" +
-                               "(4) Search for a book" +
-                               "(5) Save and exit" +
+            System.out.println("==== Book Manager ====\n" +
+                               "(1) View all books\n" +
+                               "(2) Add a book\n" +
+                               "(3) Edit a book\n" +
+                               "(4) Search for a book\n" +
+                               "(5) Save and exit\n" +
                                "Choose [1-5]: ");
             selection = scanner.nextInt();
             switch (selection) {
@@ -54,6 +54,7 @@ public class BooksInterface {
                 default:
 
             }
+            System.out.println("\n\n");
         }
     }
 
@@ -100,6 +101,7 @@ public class BooksInterface {
     }
 
     private static void print(Set<Book> books) {
+        System.out.println("All Books: ");
         books.forEach(BooksInterface::print);
     }
 
@@ -108,17 +110,18 @@ public class BooksInterface {
     }
 
     private static Book readBook() {
+        System.out.println("Enter book name: ");
+        String bookName = scanner.next();
+        scanner.nextLine();
+
         System.out.println("Enter book ID: ");
         Long bookId = scanner.nextLong();
 
-        System.out.println("Enter book name: ");
-        String bookName = scanner.nextLine();
-
         System.out.println("Enter book author: ");
-        String author = scanner.nextLine();
+        String author = scanner.next();
 
         System.out.println("Enter book description: ");
-        String bookDescription = scanner.nextLine();
+        String bookDescription = scanner.next();
 
         return new Book(bookId, bookName, author, bookDescription);
     }

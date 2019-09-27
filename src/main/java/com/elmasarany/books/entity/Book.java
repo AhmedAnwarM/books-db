@@ -69,9 +69,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book ID: " + id + "\n" +
+        return "======================================" +
+               "Book ID: " + id + "\n" +
                "Book Name: " + name + "\n" +
                "Book Author: " + author + "\n" +
-               "Book Description: " + description + "\n";
+               "Book Description: " + description + "\n" +
+               "======================================";
     }
 }
