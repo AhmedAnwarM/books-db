@@ -32,7 +32,6 @@ public class BooksInterface {
                                    "(4) Search for a book\n" +
                                    "(5) Save and exit\n" +
                                    "Choose [1-5]: ");
-                scanner.nextLine();
                 selection = scanner.nextInt();
                 switch (selection) {
                     case 1:
@@ -58,7 +57,9 @@ public class BooksInterface {
                 }
                 System.out.println("\n\n");
             } catch (Exception e) {
-                System.out.println("Failed to execute the operation you selected... Please try again");
+                LOGGER.info("Failed to execute the operation you selected... "
+                            + "Please check the failure details below and try again");
+                LOGGER.log(SEVERE, e.getMessage(), e);
             }
         }
     }
@@ -128,9 +129,10 @@ public class BooksInterface {
 
         System.out.println("Enter book author: ");
         String author = scanner.next();
+        scanner.nextLine();
 
         System.out.println("Enter book description: ");
-        String bookDescription = scanner.next();
+        String bookDescription = scanner.nextLine();
 
         return new Book(bookId, bookName, author, bookDescription);
     }
