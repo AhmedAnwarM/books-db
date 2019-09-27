@@ -24,37 +24,42 @@ public class BooksInterface {
         ctrl = new BooksController();
         int selection = 0;
         while (selection != 5) {
-            System.out.println("==== Book Manager ====\n" +
-                               "(1) View all books\n" +
-                               "(2) Add a book\n" +
-                               "(3) Edit a book\n" +
-                               "(4) Search for a book\n" +
-                               "(5) Save and exit\n" +
-                               "Choose [1-5]: ");
-            selection = scanner.nextInt();
-            switch (selection) {
-                case 1:
-                    print(ctrl.getAllBooks());
-                    break;
-                case 2:
-                    Book newBook = readBook();
-                    ctrl.addBook(newBook);
-                    break;
-                case 3:
-                    Book updatedBook = readBook();
-                    Long id = updatedBook.getId();
-                    ctrl.updateBook(id, updatedBook);
-                    break;
-                case 4:
-                    search();
-                    break;
-                case 5:
-                    saveAndExit();
-                    break;
-                default:
+            try {
+                System.out.println("==== Book Manager ====\n" +
+                                   "(1) View all books\n" +
+                                   "(2) Add a book\n" +
+                                   "(3) Edit a book\n" +
+                                   "(4) Search for a book\n" +
+                                   "(5) Save and exit\n" +
+                                   "Choose [1-5]: ");
+                scanner.nextLine();
+                selection = scanner.nextInt();
+                switch (selection) {
+                    case 1:
+                        print(ctrl.getAllBooks());
+                        break;
+                    case 2:
+                        Book newBook = readBook();
+                        ctrl.addBook(newBook);
+                        break;
+                    case 3:
+                        Book updatedBook = readBook();
+                        Long id = updatedBook.getId();
+                        ctrl.updateBook(id, updatedBook);
+                        break;
+                    case 4:
+                        search();
+                        break;
+                    case 5:
+                        saveAndExit();
+                        break;
+                    default:
 
+                }
+                System.out.println("\n\n");
+            } catch (Exception e) {
+                System.out.println("Failed to execute the operation you selected... Please try again");
             }
-            System.out.println("\n\n");
         }
     }
 
