@@ -48,7 +48,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>libs/</classpathPrefix>
-                            <mainClass><!--TODO--></mainClass>
+                            <mainClass>com.elmasarany.books.boundary.BooksInterface</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -65,7 +65,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass><!--TODO--></mainClass>
+                                    <mainClass>com.elmasarany.books.boundary.BooksInterface</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>
