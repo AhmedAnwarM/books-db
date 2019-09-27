@@ -1,7 +1,7 @@
 package com.elmasarany.books.control;
 
 import com.elmasarany.books.entity.Book;
-import com.elmasarany.books.utility.DiskUtils;
+import com.elmasarany.utility.DiskUtils;
 
 import java.util.Set;
 
@@ -52,5 +52,4 @@ public class BooksController {
         // TODO: Search for book
         return null;
     }
-
 }

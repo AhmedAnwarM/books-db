@@ -3,7 +3,7 @@ package com.elmasarany.books.boundary;
 import com.elmasarany.books.control.BooksController;
 
 /**
- * @author Ahmed Anwar
+ * @author Ahmed El Masarany
  */
 public class BooksInterface {
 
