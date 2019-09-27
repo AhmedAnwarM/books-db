@@ -66,4 +66,12 @@ public class Book {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    @Override
+    public String toString() {
+        return "Book ID: " + id + "\n" +
+               "Book Name: " + name + "\n" +
+               "Book Author: " + author + "\n" +
+               "Book Description: " + description + "\n";
+    }
 }
